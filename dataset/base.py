@@ -54,7 +54,6 @@ class BaseDataset(Dataset):
         if not self.npy:
             image_path = self.indexs[index].strip()
             # print(image_path)
-            # print("!!!!!!!!!!!!!image_path=", image_path)
             image = Image.open(image_path).convert("RGB")
         else:
             image = Image.fromarray(self.indexs[index]).convert("RGB")
